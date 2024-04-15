@@ -1,0 +1,11 @@
+export const getRandomInt = (min, max, usedArr) => {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	let newCode = Math.floor(Math.random() * (max - min + 1)) + min;
+
+	if (usedArr.includes(newCode)) {
+		newCode = Math.floor(Math.random() * (max - min + 1)) + min;
+	} else {
+		return newCode;
+	}
+};

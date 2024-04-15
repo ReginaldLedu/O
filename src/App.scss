@@ -1,0 +1,63 @@
+/*tetx templates*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+@mixin text {
+	font-family: "Inter";
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 29.05px;
+	text-align: left;
+}
+@mixin title {
+	font-family: "Inter";
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 43.57px;
+	text-align: left;
+}
+@media (max-width: 800px) {
+	@mixin text {
+		font-family: "Inter";
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 29.05px;
+		text-align: left;
+	}
+	@mixin title {
+		font-family: "Inter";
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 43.57px;
+		text-align: left;
+	}
+}
+
+.review__text,
+.review__text,
+.cart__title,
+.cart__text {
+	@include text;
+}
+.goods__title,
+.goods__price,
+.goods__buy,
+.cart__title_main,
+.order__pop-up_title,
+.order__pop-up_close {
+	@include title;
+}
+.goods__text,
+.remove_good,
+.add_good,
+.cart__order,
+.cart__phone {
+	@include text;
+}

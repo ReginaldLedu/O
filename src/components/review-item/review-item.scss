@@ -1,0 +1,28 @@
+.reviews__item {
+	max-width: 468px;
+	width: 40%;
+	min-width: 260px;
+	height: 611px;
+	background: #d9d9d9;
+	border-radius: 15px;
+}
+
+.review__text {
+	text-align: left;
+	margin-bottom: 10px;
+}
+.review__wrapper {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 12px;
+}
+@media (max-width: 800px) {
+	.reviews__item {
+		min-width: 260px;
+		width: 40%;
+		max-width: 400px;
+	}
+}
