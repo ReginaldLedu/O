@@ -20,6 +20,7 @@ export const Cart = props => {
 			quantity: item.quant,
 		};
 	});
+	const [error, setError] = useState(false);
 
 	return (
 		<section className="cart">
@@ -41,11 +42,25 @@ export const Cart = props => {
 							inputRef={inputRef}
 							onAccept={(value, mask) => {
 								setPhoneNumber(value);
-								setDisabled(false);
+								if (value.length === 11) {
+									setDisabled(false);
+									setError(false);
+								} else {
+									setError(true);
+									setDisabled(true);
+								}
 							}}
 							placeholder="+7 (___) ___ __-__"
 						/>
-
+						{error ? (
+							<p
+								style={{ fontSize: "26px", color: "red", fontFamily: "Inter" }}
+							>
+								Пожалуйста, введите корректный номер телефона
+							</p>
+						) : (
+							""
+						)}
 						<button
 							disabled={disabled}
 							onClick={() => {
